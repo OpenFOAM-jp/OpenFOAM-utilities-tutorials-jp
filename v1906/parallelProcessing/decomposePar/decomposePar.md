@@ -1,5 +1,46 @@
 # decomposePar
 
+## 概要
+
+　OpenFOAMでは並列計算を行うためにメッシュやFieldを事前に分割する必要があり、その分割を行うユーティリティがこのdecomposeParです。
+分割に関する設定は`system/decomposeParDict`に以下のように記載します。
+
+### decomposeParDictの基本設定
+
+```
+FoamFile // ヘッダ
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      decomposeParDict;
+}
+
+numberOfSubdomains 2; // 分割数
+
+method          simple; // 分割手法
+
+coeffs
+{
+    n           (2 1 1); // 各方向の分割数
+}
+
+```
+
+- numberOfSubdomains : 計算の分割数です。CPUの数に応じた数字を入力します。
+- method : 分割手法です。simple/hierarchical/scotch/manualなどの中から選択します。
+- coeff : method:simpleの場合の設定です。nには各方向の分割数を指定します。各値の積が総分割数と一致する必要があります。 
+
+### decomposeParの基本実行
+
+```
+decomposePar
+```
+
+## 分割手法
+
+## 実行オプション
+
 ## Source
 
 - [decomposePar.C](decomposePar.C) : 

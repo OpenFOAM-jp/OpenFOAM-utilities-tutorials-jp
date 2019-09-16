@@ -3,7 +3,7 @@
 This document was initially generated on 2019/09/16.
 
 - parallelProcessing
-    - [decomposePar](parallelProcessing/decomposePar/decomposePar.md) : 
+    - [decomposePar](parallelProcessing/decomposePar/decomposePar.md) : 並列計算のために領域やfieldを分割します。
     - [reconstructPar](parallelProcessing/reconstructPar/reconstructPar.md) : 
     - [redistributePar](parallelProcessing/redistributePar/redistributePar.md) : 
     - [reconstructParMesh](parallelProcessing/reconstructParMesh/reconstructParMesh.md) : 
