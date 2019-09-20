@@ -72,7 +72,7 @@ This document was initially generated on 2019/09/16.
         - [PDRblockMesh](mesh/generation/PDRblockMesh/PDRblockMesh.md) : 
         - [blockMesh](mesh/generation/blockMesh/blockMesh.md) : 
     - manipulation
-        - [moveDynamicMesh](mesh/manipulation/moveDynamicMesh/moveDynamicMesh.md) : 
+        - [moveDynamicMesh](mesh/manipulation/moveDynamicMesh/moveDynamicMesh.md) : dynamicMeshDictに記載されたメッシュ移動のみを行います。
         - [singleCellMesh](mesh/manipulation/singleCellMesh/singleCellMesh.md) : 
         - [zipUpMesh](mesh/manipulation/zipUpMesh/zipUpMesh.md) : 
         - [splitMesh](mesh/manipulation/splitMesh/splitMesh.md) : 
