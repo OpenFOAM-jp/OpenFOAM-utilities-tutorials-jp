@@ -1,5 +1,22 @@
 # redistributePar
 
+## 概要
+
+すでにdecomposeParなどで分割されたものについて再分割します。
+
+## 用途
+
+- 計算途中で分割数を変更したい場合
+
+
+- `-cellDist` : 分割番号をフィールドとして出力します。ParaViewなどでどう分割されているかを確認できます。
+- `-dry-run` : 実際に分割は行いません。`-cellDist`と組み合わせて使用します。
+- `-time` : 時刻を指定します。例：`-time ':10,20'`->「10までと20」
+- `-latestTime`最新時刻のみを分割します。
+- `-fields` : 分割するフィールドを指定します。例：`-fields '(U p)'`
+- `-region` :  (multiRegion) 指定した領域について分割します。例：`-region '(leftSolid heater)'`
+- `-allRegions` : (multiRegion) すべての領域について分割します。
+
 ## Source
 
 - [redistributePar.C](redistributePar.C) : 

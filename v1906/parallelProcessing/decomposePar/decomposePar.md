@@ -2,8 +2,22 @@
 
 ## 概要
 
-　OpenFOAMでは並列計算を行うためにメッシュやFieldを事前に分割する必要があり、その分割を行うユーティリティがこのdecomposeParです。
+　OpenFOAMでは並列計算を行うためにメッシュやFieldを事前に分割する必要があり、その分割を行うためのユーティリティがこのdecomposeParです。
 分割に関する設定は`system/decomposeParDict`に以下のように記載します。
+
+## 用途
+
+- 並列計算前のセルの分割
+
+## チュートリアル
+
+- [damBreak](tutorials/damBreak) : ダムブレークケースの分割
+
+![damBreak.png](tutorials/damBreak.png)
+
+## 設定ファイル
+
+- system/decomposeParDict
 
 ### decomposeParDictの基本設定
 
@@ -37,9 +51,21 @@ coeffs
 decomposePar
 ```
 
-## 分割手法
+## options
 
-## 実行オプション
+- `-cellDist` : 分割番号をフィールドとして出力します。ParaViewなどでどう分割されているかを確認できます。
+- `-dry-run` : 実際に分割は行いません。`-cellDist`と組み合わせて使用します。
+- `-time` : 時刻を指定します。例：`-time ':10,20'`->「10までと20」
+- `-latestTime`最新時刻のみを分割します。
+- `-fields` : 分割するフィールドを指定します。例：`-fields '(U p)'`
+- `-region` :  (multiRegion) 指定した領域について分割します。例：`-region '(leftSolid heater)'`
+- `-allRegions` : (multiRegion) すべての領域について分割します。
+- `-ifRequired` : 分割数が変更されている場合のみ分割を行います。
+- `-force` : すでに分割してあっても強制的に分割を行います。
+- `-constant` : constantディレクトリの中身を各processorにコピーします。
+- `-noSets` : *cellSets*, *faceSets*, *pointSets*については分割しません。
+- `-copyUniform` : *time/uniform*を*processorx*にコピーします。
+- `-copyZero` : *0*ディレクトリの中身を分割せずに*processorx*にただコピーします。
 
 ## Source
 
