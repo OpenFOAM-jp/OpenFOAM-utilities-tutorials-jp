@@ -3,10 +3,10 @@
 This document was initially generated on 2019/09/16.
 
 - parallelProcessing
-    - [decomposePar](parallelProcessing/decomposePar/decomposePar.md) : 並列計算のために領域やfieldを分割します。
-    - [reconstructPar](parallelProcessing/reconstructPar/reconstructPar.md) : 
-    - [redistributePar](parallelProcessing/redistributePar/redistributePar.md) : 
-    - [reconstructParMesh](parallelProcessing/reconstructParMesh/reconstructParMesh.md) : 
+    - [decomposePar](parallelProcessing/decomposePar/decomposePar.md) : 並列計算のためにフィールドを分割します。
+    - [reconstructPar](parallelProcessing/reconstructPar/reconstructPar.md) : decomposeParで分割されたフィールドを再結合します。
+    - [redistributePar](parallelProcessing/redistributePar/redistributePar.md) : すでにdecomposeParなどで分割されているメッシュやフィールドを再分割します。
+    - [reconstructParMesh](parallelProcessing/reconstructParMesh/reconstructParMesh.md) : dunamicMeshなどで分割時とメッシュが異なる場合にメッシュの再結合を行います。
 - postProcessing
     - lumped
         - [lumpedPointMovement](postProcessing/lumped/lumpedPointMovement/lumpedPointMovement.md) : 
